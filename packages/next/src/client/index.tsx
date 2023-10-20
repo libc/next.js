@@ -253,7 +253,7 @@ export async function initialize(opts: { devClient?: any } = {}): Promise<{
       // attempt detecting default locale based on hostname
       const detectedDomain = detectDomainLocale(
         process.env.__NEXT_I18N_DOMAINS as any,
-        window.location.hostname
+        window.location.host
       )
 
       // TODO: investigate if defaultLocale needs to be populated after

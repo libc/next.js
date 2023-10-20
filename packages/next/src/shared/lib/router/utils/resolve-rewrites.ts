@@ -48,7 +48,7 @@ export default function resolveRewrites(
       const hasParams = matchHas(
         {
           headers: {
-            host: document.location.hostname,
+            host: document.location.host,
             'user-agent': navigator.userAgent,
           },
           cookies: document.cookie

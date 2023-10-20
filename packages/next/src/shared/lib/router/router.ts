@@ -836,7 +836,7 @@ export default class Router implements BaseRouter {
       this.domainLocales = domainLocales
       this.isLocaleDomain = !!detectDomainLocale(
         domainLocales,
-        self.location.hostname
+        self.location.host
       )
     }
 
@@ -1227,7 +1227,7 @@ export default class Router implements BaseRouter {
           !didNavigate &&
           detectedDomain &&
           this.isLocaleDomain &&
-          self.location.hostname !== detectedDomain.domain
+          self.location.host !== detectedDomain.domain
         ) {
           const asNoBasePath = removeBasePath(as)
           handleHardNavigation({
